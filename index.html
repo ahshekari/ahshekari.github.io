@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Your Name</h1>
+    <p class="tagline">Data / Dev / Design — Short one-liner about you</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects" class="card">
+      <h2>Selected projects</h2>
+      <ul class="projects">
+        <li>
+          <h3>Project One</h3>
+          <p>Short project description. <a href="#">Demo</a> · <a href="#">Code</a></p>
+        </li>
+        <li>
+          <h3>Project Two</h3>
+          <p>Short project description. <a href="#">Demo</a> · <a href="#">Code</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About me</h2>
+      <p>One short paragraph about your skills, what you do, and what you're looking for.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Or link to LinkedIn / GitHub</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name · Built with ❤️ on GitHub Pages</p>
+  </footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
