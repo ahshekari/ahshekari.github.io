@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Time Series Forecasting Project – Amir Shekari</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>📈 Time Series Forecasting – Transactions</h1>
+    <p class="tagline">Exploring Trends, Seasonality, and Predictive Modeling (2019–2021)</p>
+    <nav>
+      <a href="index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>This project analyzed historical transaction data from 2019–2021 to identify patterns and forecast future transaction amounts. 
+      Using Python, Prophet, and XGBoost, we explored seasonality, trends, and volatility to build robust predictive models for Q1 2021.</p>
+    </section>
+
+    <section class="card">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Understand daily, weekly, and monthly transaction patterns.</li>
+        <li>Decompose the time series into trend, seasonality, and residuals.</li>
+        <li>Build and compare forecasting models using Prophet and XGBoost.</li>
+        <li>Incorporate realistic volatility adjustments for more accurate predictions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Tools & Methods</h2>
+      <ul>
+        <li><strong>Python Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Statsmodels</li>
+        <li><strong>Models:</strong> Prophet (trend & seasonality), XGBoost (gradient boosting)</li>
+        <li><strong>Evaluation Metrics:</strong> RMSE, MAE, R², MAPE, Direction Accuracy</li>
+        <li><strong>Data Engineering:</strong> Lag features, rolling means, time-based features</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Key Findings</h2>
+      <ul>
+        <li><strong>Prophet Results:</strong> RMSE ≈ 21,645 | MAE ≈ 15,782 | R² = 0.13 | Direction Accuracy ≈ 62%</li>
+        <li><strong>XGBoost Results:</strong> RMSE ≈ 13,325 | MAE ≈ 8,202 | R² = 0.67 | Direction Accuracy ≈ 86%</li>
+        <li>XGBoost significantly outperformed Prophet in predictive accuracy and trend direction.</li>
+        <li>Separating credit vs. debit transactions improved forecasting precision by capturing distinct patterns.</li>
+        <li>Adding volatility adjustments made forecasts align more closely with real-world fluctuations.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Impact</h2>
+      <p>The project demonstrated how time series forecasting can be applied to financial transaction data, 
+      providing insights into seasonality, transaction spikes, and forward-looking projections. 
+      It highlighted the strengths of combining machine learning (XGBoost) with statistical forecasting (Prophet).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Amir Shekari · Built with ❤️ on GitHub Pages</p>
+  </footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
