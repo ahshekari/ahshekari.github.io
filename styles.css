@@ -1,27 +1,158 @@
-/* Logo styling */
-.logo {
-  display: block;
-  margin: 0 auto 1rem auto;  /* centers logo above text */
-  height: 50px;              /* smaller height */
-  max-width: 150px;          /* ensures it never goes too wide */
-  object-fit: contain;       /* keeps aspect ratio */
+/* ---------- Global Styles ---------- */
+:root {
+  --bg-color: #f7f7f9;
+  --text-color: #111;
+  --primary-color: #111;
+  --accent-color: #0078ff;
+  --card-bg: #fff;
+  --font-main: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
 
-/* Update header */
+/* ---------- Header ---------- */
 .site-header {
-  background:#111;
-  color:#fff;
-  padding:2rem;
-  text-align:center;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* for responsiveness */
 }
 
-.site-header h1 {
-  margin:0;
-  font-size:2rem;
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
-.site-header .tagline {
-  opacity:.9;
-  margin:.4rem 0 1rem 0;
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
 }
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header-text .tagline {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.site-header nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Main Layout ---------- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ---------- Card Styling ---------- */
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.projects li:last-child {
+  border-bottom: none;
+}
+
+.projects h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.projects a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.projects a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header nav {
+    margin-top: 1rem;
+  }
+
+  .site-header nav a {
+    margin: 0 0.5rem 0.5rem 0;
+    display: inline-block;
+  }
+}
+
