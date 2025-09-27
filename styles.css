@@ -2,8 +2,11 @@
 .logo {
   display: block;
   margin: 0 auto 1rem auto;  /* centers logo above text */
-  height: 80px;              /* adjust as needed */
+  height: 50px;              /* smaller height */
+  max-width: 150px;          /* ensures it never goes too wide */
+  object-fit: contain;       /* keeps aspect ratio */
 }
+
 
 /* Update header */
 .site-header {
